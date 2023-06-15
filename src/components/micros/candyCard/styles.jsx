@@ -46,6 +46,8 @@ export const Icon = styled.Image`
 width: 50px;
 height: 50px;
 object-fit: cover;
+
+background: ${props => props.fav ? "#000000" : "transparent"};
 `
 
 export const IconButton = styled.Image`

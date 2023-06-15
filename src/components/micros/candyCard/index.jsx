@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as S from './styles';
-import { Text } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 
 const CandyCard = ({ name, amount, price, ...props }) => {
 
@@ -14,6 +14,10 @@ const CandyCard = ({ name, amount, price, ...props }) => {
   const handleRecipe = () => {
     setIsRecipe(!isRecipe)
   }
+  const handleFav = () => {
+    setFav(!fav)
+  }
+
   return (
     <S.Container onPress={handleCard}>
       {(isRecipe && isOpen) ? (
@@ -25,7 +29,7 @@ const CandyCard = ({ name, amount, price, ...props }) => {
             <S.Amount>{amount} porções</S.Amount>
             <S.Price>R${price} venda</S.Price>
         </S.TextField>
-        <S.Icon source={require("../../../assets/star.png")}/>
+        <TouchableOpacity onPress={handleFav}><S.Icon fav={fav} source={require("../../../assets/star.png")}/></TouchableOpacity>
       </S.Box>
       )}
       {isOpen &&
