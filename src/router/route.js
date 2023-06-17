@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import AuthProvider from "../context/auth";
 import { Register, Login } from "../pages";
+import { Main } from "../pages/main/Main";
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +26,13 @@ const Route = () => {
               headerShown: true,
             }}
             component={Register}
+          />
+          <Stack.Screen
+            name="Main"
+            options={{
+              headerShown: false,
+            }}
+            component={Main}
           />
         </Stack.Navigator>
         <StatusBar style="auto" />

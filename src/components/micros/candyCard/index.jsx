@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import * as S from './styles';
 import { Text, TouchableOpacity } from 'react-native';
 
-const CandyCard = ({ name, amount, price, ...props }) => {
+const CandyCard = ({ name, amount, price }) => {
 
   const [fav, setFav] = useState(false)
   const [isOpen, setIsOpen] = useState(false)

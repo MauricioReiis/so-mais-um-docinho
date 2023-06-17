@@ -14,7 +14,8 @@ export const Login = () => {
   };
 
   const showAlert = () => {
-    Alert.alert('Sucesso', 'Login realizado com sucesso!');
+    console.log('Sucesso', 'Login realizado com sucesso!');
+    navigation.navigate('Main')
 };
 
   return (
