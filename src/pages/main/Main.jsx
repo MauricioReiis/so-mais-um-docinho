@@ -1,4 +1,3 @@
-import { Text} from 'react-native';
 import Menu from './../../components/Menu';
 import * as S from "./styles"
 import Carrossel from './../../components/Carrossel';
